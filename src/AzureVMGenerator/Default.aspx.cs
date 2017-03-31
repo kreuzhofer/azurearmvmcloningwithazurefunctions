@@ -33,10 +33,11 @@ namespace AzureVMGenerator
 			eMailTextBox.Enabled = false;
 			bodyTextBox.Enabled = false;
 			SendButton.Enabled = false;
-            RunAzureFunction(nameString, eMailString, bodyString);
+			string emailCcAddr = CloudConfigurationManager.GetSetting("emailCcAddress");
+			RunAzureFunction(nameString, eMailString, emailCcAddr, bodyString);
         }
 
-		public void RunAzureFunction(string customerName, string eMailToAddr, string bodyText)
+		public void RunAzureFunction(string customerName, string eMailToAddr, string emailCcAddr, string bodyText)
 		{
 			//Generate random 8 digit string
 			var pChars = "abcdefghijklmnopqrstuvwxyz";
@@ -57,7 +58,7 @@ namespace AzureVMGenerator
 {{
 	""deploymentName"": ""{randGenString}"",
 	""emailTOAddress"" : ""{eMailToAddr}"",
-    ""emailCCAddress"" : ""daniel.kreuzhofer@microsoft.com"",
+    ""emailCCAddress"" : ""{emailCcAddr}"",
     ""emailBody"" : ""{bodyText}"",
     ""customerName"" : ""{customerName}""
 }}

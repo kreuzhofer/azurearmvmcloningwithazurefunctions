@@ -7,8 +7,6 @@ If you haven't already done so, set up a Microsoft Azure account at https://port
 
 
 ###### Create a Service Principal
-//// Review this section; Links are Ok ////
-
 Create a Service Principal. 
 - [You can find further information on setting up Service Principals here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)
 - [You can find further information on authenticating against Service Principals here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authenticate-service-principal)
@@ -16,9 +14,16 @@ Create a Service Principal.
 ###### Create an Azure Function
 Create an Azure Function. To do so, log into https://portal.azure.com, click on "New" in the left hand side column, then type in "Function App". Select "Function App" published by Microsoft, then click "Create". 
 
+Select PowerShell in the language drop down menu. Then select "Queue trigger" as a trigger. Make sure to use the same storage account as the WebApp. 
+
 ###### Create the template VM that you want to clone later
 Create an Azure Virtual Machine. To do so, log into https://portal.azure.com, click on "New" in the left hand side column, then select "Compute". Select the OS of your choice, and enter the requested information. Create the Virtual Machine. 
 
+Access the VM by your method of choice. Set it up, install software of your choice.
+
+Caution: keep in mind that all changes made to the default state of the VM will be reflected in every cloned Virtual Machine. This includes saved passwords. 
+
+When you're done, stop the VM through the [Azure Portal](https://portal.azure.com). If the VM is still running, you won't be able to clone it. 
 
 #### Installation
 Open the .sln file included in this repository. 
@@ -33,3 +38,9 @@ Click "Create". Visual Studio will automatically deploy your WebApp.
 
 #### Deployment using alternative techniques
 This sample uses Visual Studio to deploy the WebApp. You can find further instructions on how to deploy WebApps by other means [here](https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-deploy). 
+
+
+#### Best Practices
+Use a single one resource group for the entire project. 
+
+Make sure to keep all resources in the same location. 

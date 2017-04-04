@@ -2,6 +2,10 @@
 With this project you will be able to set up a simple web portal, where people can "order" new virtual machines that get cloned from a master vm image (optionally with attached data disks)
 
 
+#### Overview
+![Overview](https://github.com/horrion/azurearmvmcloningwithazurefunctions/blob/master/docs/VmCloningProcessOverview.png)
+
+
 #### Prerequisites
 If you haven't already done so, set up a Microsoft Azure account at https://portal.azure.com. 
 

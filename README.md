@@ -7,7 +7,9 @@ With this project you will be able to set up a simple web portal, where people c
 
 
 #### Contributions
-Thanks to [horrion](https://github.com/horrion) for creating the web-portal, documentation and testing
+[kreuzhofer](https://github.com/kreuzhofer), initial project setup, powershell scripting
+
+thanks to [horrion](https://github.com/horrion) for creating the web-portal, documentation and testing
 
 
 #### Prerequisites

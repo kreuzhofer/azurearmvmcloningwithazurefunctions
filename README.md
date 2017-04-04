@@ -16,6 +16,8 @@ Create an Azure Function. To do so, log into https://portal.azure.com, click on 
 
 Select PowerShell in the language drop down menu. Then select "Queue trigger" as a trigger. Make sure to use the same storage account as the WebApp. 
 
+Note: The Azure Function and WebApp have to use the same Consumption Plan. Do not set up the function under "Shared Consumption". 
+
 ###### Create the template VM that you want to clone later
 Create an Azure Virtual Machine. To do so, log into https://portal.azure.com, click on "New" in the left hand side column, then select "Compute". Select the OS of your choice, and enter the requested information. Create the Virtual Machine. 
 
@@ -35,6 +37,9 @@ Set a Web App Name, Select a Subscription, a Resource Group, and an App Service 
 You may create a new Resource Group and a new App Service Plan, if you haven't already done so. 
 Click "Create". Visual Studio will automatically deploy your WebApp. 
 
+#### WebApp Configuration
+Copy an access key and paste it into your WebApp's configuration. 
+Find your storage account's connection string under <your-storage-account-name> -> Access Keys. You can find the WebApp's configuration under <your-WebApp-Name> -> Application settings. Paste it into the Value textbox under "App settings", then save the configuration. 
 
 #### Deployment using alternative techniques
 This sample uses Visual Studio to deploy the WebApp. You can find further instructions on how to deploy WebApps by other means [here](https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-deploy). 

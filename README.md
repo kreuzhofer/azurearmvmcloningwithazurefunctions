@@ -3,7 +3,7 @@ With this project you will be able to set up a simple web portal, where people c
 
 
 #### Overview
-![Overview](https://github.com/horrion/azurearmvmcloningwithazurefunctions/blob/master/docs/VmCloningProcessOverview.png)
+![Overview](https://github.com/kreuzhofer/azurearmvmcloningwithazurefunctions/blob/master/docs/VmCloningProcessOverview.png)
 
 
 #### Prerequisites

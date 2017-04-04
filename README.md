@@ -28,7 +28,9 @@ Create an Azure Function. To do so, log into https://portal.azure.com, click on 
 
 Select PowerShell in the language drop down menu. Then select "Queue trigger" as a trigger. Make sure to use the same storage account as the WebApp. 
 
-Note: The Azure Function and WebApp have to use the same Consumption Plan. Do not set up the function under "Shared Consumption". 
+Note: The Azure Function and WebApp have to use the same Consumption Plan. Do not set up the function under "Shared Consumption".
+
+Copy the contents of the Powershell Script "NewARMVmFromVHD_RunAsAzureFunction.ps1" into the Azure Function. It is located in "src\AzureVMGenerator\PowerShell"
 
 ###### Create the template VM that you want to clone later
 Create an Azure Virtual Machine. To do so, log into https://portal.azure.com, click on "New" in the left hand side column, then select "Compute". Select the OS of your choice, and enter the requested information. Create the Virtual Machine. 
